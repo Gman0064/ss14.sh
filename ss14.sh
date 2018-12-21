@@ -123,11 +123,11 @@ else
 fi
 
 echo -e "${GREEN}Setting up fonts...${NC}"
-curl http://pastebin.com/raw/Ziqx5ZrT > ./fontsmooth.reg 2>&1 >>log/wget.log
-regedit fontsmooth.reg 2>&1 >log/regedit.log
-winetricks -q allfonts 2>&1 >log/fonts.log
-winetricks -q settings fontsmooth=rgb 2>&1 >>log/regedit.log
-rm fontsmooth.reg
+# curl http://pastebin.com/raw/Ziqx5ZrT > ./fontsmooth.reg 2>&1 >>log/wget.log
+# regedit fontsmooth.reg 2>&1 >log/regedit.log
+# winetricks -q allfonts 2>&1 >log/fonts.log
+# winetricks -q settings fontsmooth=rgb 2>&1 >>log/regedit.log
+# rm fontsmooth.reg
 echo -e "${BLUE}Done!${NC}"
 
 cat <<EOF > $SS13DIR/runss13.sh
