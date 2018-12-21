@@ -65,10 +65,10 @@ then
     echo -e "${BLUE}Did not detect any BYOND install, installing...${NC}"
     curl -L -O $FULLURL 2>&1 >log/wget.log
     mkdir -p ziptmp
-    unzip -qq 512.1461.zip -d ziptmp
+    unzip -qq $FULLVER -d ziptmp
     ls ziptmp
     mv ziptmp/byond $SS13DIR/drive_c/Program\ Files/BYOND
-    rm ./512.1461.zip
+    rm ./$FULLVER
     rm -rf ziptmp
     echo "$FULLVER" > $SS13DIR/.byondver
     echo -e "${BLUE}Done!${NC}"
