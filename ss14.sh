@@ -57,7 +57,7 @@ fi
 
 #MAJOR=$(curl -s http://www.byond.com/download/build/ | gr 'href="\d+/"' | cut -c 7-9 | sort -r | head -n 1)
 #MAJORURL=
-FULLVER=512.1461_byond.zip)
+FULLVER=512.1461_byond.zip
 FULLURL=http://www.byond.com/download/build/512/512.1461_byond.zip
 
 if [ ! -d "$SS13DIR/drive_c/Program Files/BYOND" ]
