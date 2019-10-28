@@ -151,7 +151,7 @@ cat <<EOF > ~/.local/share/applications/byond.desktop
 Type=Application
 Version=1.0
 Name=BYOND
-Comment=
+Comment=BYOND is the premier community for making and playing online multiplayer games.
 Path=$SS13DIR
 Exec=$SS13DIR/runss13.sh
 Icon=$SS13DIR/icon.png
