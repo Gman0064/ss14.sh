@@ -29,7 +29,7 @@ function gr {
     fi
 }
 
-SS13DIR=$PWD/ss13
+SS13DIR=$PWD/BYOND
 mkdir -p $SS13DIR
 export WINEPREFIX=$SS13DIR
 export WINEARCH=win32
@@ -57,18 +57,18 @@ fi
 
 #MAJOR=$(curl -s http://www.byond.com/download/build/ | gr 'href="\d+/"' | cut -c 7-9 | sort -r | head -n 1)
 #MAJORURL=
-FULLVER=512.1461_byond.zip
-FULLURL=http://www.byond.com/download/build/512/512.1461_byond.zip
+FULLVER=512.1488_byond.zip
+FULLURL=http://www.byond.com/download/build/512/512.1488_byond.zip
 
 if [ ! -d "$SS13DIR/drive_c/Program Files/BYOND" ]
 then
     echo -e "${BLUE}Did not detect any BYOND install, installing...${NC}"
     curl -L -O $FULLURL 2>&1 >log/wget.log
     mkdir -p ziptmp
-    unzip -qq 512.1461_byond.zip -d ziptmp
+    unzip -qq 512.1488_byond.zip -d ziptmp
     ls ziptmp
     mv ziptmp/byond $SS13DIR/drive_c/Program\ Files/BYOND
-    rm ./512.1461_byond.zip
+    rm ./512.1488_byond.zip
     rm -rf ziptmp
     echo "512.1461_byond.zip" > $SS13DIR/.byondver
     echo -e "${BLUE}Done!${NC}"
@@ -132,7 +132,7 @@ echo -e "${BLUE}Done!${NC}"
 
 cat <<EOF > $SS13DIR/runss13.sh
 #!/bin/sh
-export WINEPREFIX=$PWD/ss13
+export WINEPREFIX=$PWD/BYOND
 export WINEARCH=win32
 export WINEDEBUG=-all
 
@@ -151,7 +151,7 @@ cat <<EOF > ~/.local/share/applications/byond.desktop
 Type=Application
 Version=1.0
 Name=BYOND
-Comment=A one-way ticket to space hell.
+Comment=
 Path=$SS13DIR
 Exec=$SS13DIR/runss13.sh
 Icon=$SS13DIR/icon.png
